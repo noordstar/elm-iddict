@@ -118,13 +118,16 @@ empty =
 -}
 fromList : List ( Int, a ) -> Iddict a
 fromList items =
+    let
+        ( cursor, dict ) =
+            List.foldl
+                (\( k, v ) ( cur, acc ) -> ( max (k + 1) cur, Dict.insert k v acc ))
+                ( 0, Dict.empty )
+                items
+    in
     Iddict
-        { cursor =
-            items
-                |> List.map Tuple.first
-                |> List.maximum
-                |> Maybe.withDefault 0
-        , dict = Dict.fromList items
+        { cursor = cursor
+        , dict = dict
         }
 
 

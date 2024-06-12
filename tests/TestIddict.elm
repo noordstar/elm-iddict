@@ -273,3 +273,16 @@ insert =
                             (Iddict.size d + 1)
             )
         ]
+
+
+fromList : Test
+fromList =
+    describe "fromList"
+        [ test "Sets the cursor correctly" <|
+            \_ ->
+                Iddict.fromList [ ( 0, "foo" ) ]
+                    |> Iddict.insert "bar"
+                    |> Tuple.second
+                    |> Iddict.values
+                    |> Expect.equal [ "foo", "bar" ]
+        ]
