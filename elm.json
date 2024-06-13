@@ -3,7 +3,7 @@
     "name": "noordstar/elm-iddict",
     "summary": "Simple dictionary type using unique integer identifiers as unique keys.",
     "license": "EUPL-1.1",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": [
         "Iddict"
     ],

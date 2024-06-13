@@ -1,7 +1,7 @@
 # Elm Iddict
 
 Sometimes, you want to store items efficiently in a dictionary, but you don't
-know (or don't care) about what key to use, but you do want to store the values
+know (or don't care) about what key to use, and you prefer to store the values
 more efficiently than in a list.
 
 The **Iddict** module in Elm lets you store values in a dictionary without
